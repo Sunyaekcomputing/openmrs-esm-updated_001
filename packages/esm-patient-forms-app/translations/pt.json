@@ -1,0 +1,20 @@
+{
+  "clinicalForm": "Formulário Clínico",
+  "clinicalForms": "Formulários clínicos",
+  "formName": "Nome do Formulário (A-Z)",
+  "forms": "Formulários",
+  "homeOverviewCardView": "Visualizar",
+  "lastCompleted": "Último preenchido",
+  "never": "Nunca",
+  "noFormsToDisplay": "Não há formulários para visualizar.",
+  "offlineForms": "Formulários off-line",
+  "offlineForms__lower": "Formulários on-line",
+  "offlineFormsOverviewCardAvailableOffline": "Disponível off-line",
+  "offlineFormsTableFormAvailableOffline": "Off-line",
+  "offlineFormsTableFormNameHeader": "Nome do formulário",
+  "offlineFormsTitle": "Formulários off-line",
+  "offlinePatientsTableSearchLabel": "Pesquisar esta lista",
+  "offlinePatientsTableSearchPlaceholder": "Pesquisar esta lista",
+  "offlineToggle": "Alternar off-line",
+  "searchThisList": "Pesquisar esta lista"
+}

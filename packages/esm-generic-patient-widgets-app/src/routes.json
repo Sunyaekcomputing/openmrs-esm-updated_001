@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "backendDependencies": {
+    "fhir2": ">=1.2"
+  },
+  "extensions": [
+    {
+      "name": "obs-by-encounter-widget",
+      "component": "switchableObs",
+      "online": true,
+      "offline": true,
+      "meta": {
+        "fullWidth": false
+      }
+    },
+    {
+      "name": "obs-table-horizontal-widget-small",
+      "component": "obsTableHorizontal",
+      "online": true,
+      "offline": true,
+      "meta": {
+        "fullWidth": false
+      }
+    },
+    {
+      "name": "obs-table-horizontal-widget",
+      "component": "obsTableHorizontal",
+      "online": true,
+      "offline": true,
+      "meta": {
+        "fullWidth": true
+      }
+    }
+  ]
+}

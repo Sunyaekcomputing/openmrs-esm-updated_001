@@ -1,0 +1,368 @@
+/* ----------------------- Loader & Error ----------------------- */
+.loaderContainer {
+  height: 100vh;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50%;
+}
+
+.errorContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #d32f2f;
+}
+
+/* ----------------------- Success Modal ----------------------- */
+.custom-success-modal {
+  text-align: center;
+
+  .carbon-modal-header__heading {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: #2e7d32 !important;
+  }
+
+  .modal-content-text {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #1b5e20 !important;
+    margin: 2rem 0;
+    line-height: 1.5;
+  }
+
+  .carbon-button--primary {
+    display: block;
+    margin: 2rem auto 0 auto;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.2rem 3.5rem;
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #2e7d32;
+    }
+  }
+}
+/* संधै जसो */
+
+
+/* ----------------------- Question Labels ----------------------- */
+/* Question label */
+div[data-testid$="-label"] {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1551c0; /* question label color */
+  margin-bottom: 0.8rem;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: block;
+  max-width: 100%;
+  line-height: 1.5;
+
+  .required {
+    color: #d32f2f;
+    margin-left: 0.25rem;
+  }
+
+  .tooltipIcon {
+    margin-left: 0.25rem;
+    color: #f9a825;
+  }
+}
+
+/* Radio button labels */
+/* Radio button labels */
+input[data-testid*="-answer-"] + label {
+  font-size: 1.0rem;   /* enforce size */
+  font-weight: 600;
+  color: #030303;
+  line-height: 24px;
+}
+:global(input[data-testid*="-answer-"] + label .cds--radio-button__label-text) {
+  font-size: 1.6rem ;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  color: #0f0f0f;
+}
+/* Target the label immediately after the input using data-testid */
+input[data-testid*="-checkbox-"] + label {
+  font-size: 1rem;         /* base font size */
+  font-weight: 600;
+  color: #030303;
+  line-height: 24px;
+}
+
+/* Target the inner label text of Carbon checkbox specifically */
+:global(input[data-testid*="-checkbox-"] + label .cds--checkbox-label-text) {
+  font-size: 1.6rem;        /* your desired font size */
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  color: #0f0f0f;
+  margin-bottom: 0.8rem;    /* add vertical space between checkboxes */
+  display: block;           /* ensure margin-bottom works */
+}
+
+:global(.cds--accordion__title) {
+  font-size: 1.6rem;       /* adjust size */
+  font-weight: 600;        /* bold */
+  color: #0f0f0f;          /* text color */
+  line-height: 24px;       /* spacing */
+}
+/* Global style for Carbon form legend labels */
+:global(legend.cds--label) {
+  font-size: 1.6rem;       /* adjust size */
+  font-weight: 600;        /* bold */
+  color: #0f0f0f;          /* text color */
+  line-height: 24px;       /* spacing */
+}
+
+/* Remove scroll in the form workspace */
+.formEngineWorkspace {
+  overflow-y: hidden !important;
+  height: 100% !important;
+}
+
+
+.formContent {
+  overflow-y: hidden !important;
+  height: 100% !important;
+}
+
+/*
+
+
+/* ----------------------- Choice / Option Section ----------------------- */
+div[data-testid$="-answer"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  label {
+    font-size: 1.55rem;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(21, 101, 192, 0.1);
+    }
+
+    /* Larger radio & checkbox */
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: 2.2rem;
+      height: 2.2rem;
+      cursor: pointer;
+      accent-color: #1565c0; /* modern browsers */
+    }
+
+    /* Highlight selected option */
+    input[type="radio"]:checked + span,
+    input[type="checkbox"]:checked + span {
+      background-color: rgba(21, 101, 192, 0.2);
+      border-radius: 0.4rem;
+    }
+
+    span {
+      display: inline-block;
+      flex: 1;
+    }
+  }
+
+  select {
+    font-size: 1.55rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #1565c0;
+      box-shadow: 0 0 5px #1565c0;
+      outline: none;
+    }
+  }
+}
+
+/* ----------------------- Section Headers ----------------------- */
+h3[data-testid$="-form-item"] {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6a1b9a;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #f3e5f5, #e1bee7);
+  border-bottom: 2px solid #ce93d8;
+}
+
+/* ----------------------- Page Titles ----------------------- */
+h2[data-testid$="-page-label"] {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0d47a1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ----------------------- Section Container ----------------------- */
+div[data-testid$="-section-container"] {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+
+  &:nth-child(odd) {
+    background-color: #e3f2fd;
+  }
+
+  &:nth-child(even) {
+    background-color: #fce4ec;
+  }
+}
+
+/* ----------------------- Form Fields ----------------------- */
+input,
+textarea,
+select {
+  font-size: 1.6rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #90caf9;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 5px #1565c0;
+    outline: none;
+  }
+}
+
+/* ----------------------- Pagination Buttons ----------------------- */
+.form-page-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+
+  .carbon-button {
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* ----------------------- Responsive ----------------------- */
+@media (max-width: 1024px) {
+  div[data-testid$="-label"] {
+    font-size: 1.5rem !important;
+  }
+
+  h3[data-testid$="-section-label"] {
+    font-size: 1.8rem;
+    padding: 0.8rem;
+  }
+
+  h2[data-testid$="-page-label"] {
+    font-size: 2rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1.4rem;
+  }
+
+  .form-page-navigation .carbon-button {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .custom-success-modal .carbon-modal-header__heading {
+    font-size: 2.2rem !important;
+  }
+
+  .custom-success-modal .modal-content-text {
+    font-size: 1.8rem !important;
+  }
+
+  .custom-success-modal .carbon-button--primary {
+    font-size: 1.6rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  div[data-testid$="-label"] {
+    font-size: 1.3rem !important;
+  }
+
+  h3[data-testid$="-section-label"] {
+    font-size: 1.6rem;
+  }
+
+  h2[data-testid$="-page-label"] {
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1.2rem;
+  }
+  /* === OpenMRS Form Styling Overrides === */
+
+/* General Radio Button Styling */
+.cds--radio-button__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+
+
+/* Green for संधै जसो */
+
+
+/* Selected (checked) radio */
+input[type="radio"]:checked + .cds--radio-button__label .cds--radio-button__appearance {
+  background-color: #0072c3;
+  border-color: #0072c3;
+}
+
+
+  /* Bigger touch targets for radio & checkbox on mobile */
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 2.6rem !important;
+    height: 2.6rem !important;
+  }
+}

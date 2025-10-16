@@ -1,0 +1,20 @@
+{
+  "clinicalForm": "临床表单",
+  "clinicalForms": "临床表单",
+  "formName": "表单名称（A-Z）",
+  "forms": "表单",
+  "homeOverviewCardView": "查看",
+  "lastCompleted": "最后完成",
+  "never": "从未",
+  "noFormsToDisplay": "没有表单可显示",
+  "offlineForms": "离线表单",
+  "offlineForms__lower": "离线表单",
+  "offlineFormsOverviewCardAvailableOffline": "离线可用",
+  "offlineFormsTableFormAvailableOffline": "离线",
+  "offlineFormsTableFormNameHeader": "表单名称",
+  "offlineFormsTitle": "离线表单",
+  "offlinePatientsTableSearchLabel": "搜索此列表",
+  "offlinePatientsTableSearchPlaceholder": "搜索此列表",
+  "offlineToggle": "离线切换",
+  "searchThisList": "搜索此列表"
+}

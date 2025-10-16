@@ -1,0 +1,20 @@
+{
+  "clinicalForm": "Modulo clinico",
+  "clinicalForms": "Moduli clinici",
+  "formName": "Nome modulo (A-Z)",
+  "forms": "Moduli",
+  "homeOverviewCardView": "Visualizza",
+  "lastCompleted": "Ultimo completato",
+  "never": "Mai",
+  "noFormsToDisplay": "Non ci sono moduli da visualizzare.",
+  "offlineForms": "Moduli offline",
+  "offlineForms__lower": "moduli offline",
+  "offlineFormsOverviewCardAvailableOffline": "Disponibile offline",
+  "offlineFormsTableFormAvailableOffline": "Offline",
+  "offlineFormsTableFormNameHeader": "Nome modulo",
+  "offlineFormsTitle": "Moduli offline",
+  "offlinePatientsTableSearchLabel": "Cerca in questo elenco",
+  "offlinePatientsTableSearchPlaceholder": "Cerca in questo elenco",
+  "offlineToggle": "Attiva/disattiva offline",
+  "searchThisList": "Cerca in questo elenco"
+}
