@@ -84,8 +84,8 @@
     "*.{css,scss,ts,tsx}": "prettier --write --list-different"
   },
   "resolutions": {
-    "sass": "^1.54.3",
-    "@openmrs/esm-form-engine-lib": "portal:/home/santosh/chart-app/openmrs-esm-updated-patient-chart_001/openmrs-esm-patient-chart/packages/openmrs-esm-form-engine-lib"
+    "@openmrs/esm-form-engine-lib": "portal:C:/final_include/openmrs-esm-form-engine-lib",
+    "@openmrs/esm-patient-common-lib": "portal:C:/openmrs-esm-updated_001/packages/esm-patient-common-lib"
   },
   "packageManager": "yarn@4.9.1"
 }
