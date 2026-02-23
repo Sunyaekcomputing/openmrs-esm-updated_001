@@ -54,7 +54,7 @@ const ClinicalFormActionButton: React.FC = () => {
 
   useEffect(() => {
     const patientUuid = getPatientUuidFromUrl();
-    console.log('Resolved patientUuid from URL:', patientUuid);
+    
 
     if (!patientUuid || hasLaunchedRef.current) return;
 
@@ -62,12 +62,12 @@ const ClinicalFormActionButton: React.FC = () => {
       const user = session?.user;
       if (!user) return;
 
-      const isAllowed = !user.roles?.some((r) => r.display === 'Self-Registration');
+      const isAllowed = !user.roles?.some((r) => r.display === 'self registration');
       if (!isAllowed) return;
 
       hasLaunchedRef.current = true;
 
-      console.log('Auto-launching form for patient:', patientUuid);
+      
 
       setTimeout(() => {
         launchWorkspace(formEntryWorkspace, {

@@ -159,13 +159,14 @@ export function saveAttachments(fields: FormField[], encounter: OpenmrsEncounter
 }
 
 export function getMutableSessionProps(context: FormContextProps) {
-  const { formFields, location, currentProvider, customDependencies, domainObjectValue: encounter } = context;
+  const { formFields, location, currentProvider, customDependencies, domainObjectValue: encounter, sessionDate } = context;
   const { defaultEncounterRole } = customDependencies;
   const encounterRole =
     formFields.find((field) => field.type === 'encounterRole')?.meta.submission?.newValue || defaultEncounterRole?.uuid;
   const encounterProvider =
     formFields.find((field) => field.type === 'encounterProvider')?.meta.submission?.newValue || currentProvider.uuid;
-  const encounterDate = formFields.find((field) => field.type === 'encounterDatetime')?.meta.submission?.newValue;
+  const encounterDate =
+    formFields.find((field) => field.type === 'encounterDatetime')?.meta.submission?.newValue || sessionDate;
   const encounterLocation =
     formFields.find((field) => field.type === 'encounterLocation')?.meta.submission?.newValue ||
     encounter?.location?.uuid ||
